@@ -17,10 +17,15 @@ public class CountDownTimer : MonoBehaviour
     [SerializeField]
     private Text text;
 
+    [SerializeField]
+    private GameObject GameOver;
+
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
+        GameOver = GameObject.Find("GameOverText");
+        GameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -67,8 +72,14 @@ public class CountDownTimer : MonoBehaviour
         }
         else if (timer < 0 && isRunning)
         {
+            timer = 0;
             isRunning = false;
-            Debug.Log("Time's up");
+            GameOver.SetActive(true);
         }
+    }
+
+    public float GetTimer()
+    {
+        return this.timer;
     }
 }
