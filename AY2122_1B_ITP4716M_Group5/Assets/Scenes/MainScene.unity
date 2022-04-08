@@ -2668,7 +2668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211538380094548489}
   m_Layer: 0
-  m_Name: portal
+  m_Name: VolleyballPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

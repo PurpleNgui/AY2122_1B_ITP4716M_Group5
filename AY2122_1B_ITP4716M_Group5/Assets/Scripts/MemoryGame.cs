@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MemoryGame : MonoBehaviour
 {
-    CountDownTimer timer;
-    float countDown;
     int first;
     int second;
 
@@ -15,14 +13,27 @@ public class MemoryGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //TimerGameObject = GameObject.Find("CountDownTimer");
-        timer = GetComponent<CountDownTimer>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        countDown = timer.GetTimer();
-        Debug.Log("Time = " + countDown);
+
+    }
+
+    public void ResetCard(string[] card)
+    {
+        string temp;
+        int first, second;
+
+        for (int i = 0; i < 40; i++)
+        {
+            first = Random.Range(0, 20);
+            second = Random.Range(0, 20);
+            temp = card[first];
+            card[first] = card[second];
+            card[second] = temp;
+        }
     }
 }
