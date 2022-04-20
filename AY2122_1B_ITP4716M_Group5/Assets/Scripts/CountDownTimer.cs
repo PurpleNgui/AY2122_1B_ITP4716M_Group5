@@ -25,7 +25,7 @@ public class CountDownTimer : MonoBehaviour
     {
         text = GetComponent<Text>();
         GameOver = GameObject.Find("GameOverText");
-        GameOver.SetActive(false);
+        //GameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -74,12 +74,7 @@ public class CountDownTimer : MonoBehaviour
         {
             timer = 0;
             isRunning = false;
-            GameOver.SetActive(true);
+            //GameOver.SetActive(true);
         }
-    }
-
-    public float GetTimer()
-    {
-        return this.timer;
     }
 }

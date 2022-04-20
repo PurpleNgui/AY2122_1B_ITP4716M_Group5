@@ -7,9 +7,6 @@ public class MemoryGame : MonoBehaviour
     int first;
     int second;
 
-    //[SerializeField]
-    //private  TimerGameObject;
-
     // Start is called before the first frame update
     void Start()
     {
