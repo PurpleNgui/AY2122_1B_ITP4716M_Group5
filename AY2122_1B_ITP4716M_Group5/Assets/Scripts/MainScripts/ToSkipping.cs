@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToSkipping : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class ToSkipping : MonoBehaviour
     {
         if (collision.gameObject.name == "FPSController")
         {
-            Debug.Log("Touch");
-            SceneManager.LoadScene("MemoryGameScene");
+            //Debug.Log("Touch");
+            SceneManager.LoadScene("SkippingScene");
         }
     }
 }
