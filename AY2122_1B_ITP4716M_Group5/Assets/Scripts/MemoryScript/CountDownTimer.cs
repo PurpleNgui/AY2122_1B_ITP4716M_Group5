@@ -7,10 +7,10 @@ public class CountDownTimer : MonoBehaviour
 {
     public float timer = 10;
 
-    [SerializeField]
+    //[SerializeField]
     private float minute = 0;
 
-    [SerializeField]
+    //[SerializeField]
     private float second = 0;
     public bool isRunning = true;
 

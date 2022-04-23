@@ -587,6 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainmenu: {fileID: 307808248}
   option: {fileID: 1853726092}
+  Camera: {fileID: 0}
 --- !u!1 &332349366
 GameObject:
   m_ObjectHideFlags: 0
