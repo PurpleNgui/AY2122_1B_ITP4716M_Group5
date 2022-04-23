@@ -20,7 +20,7 @@ public class PlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerHPText.text = "Player HP: " + playerHP.ToString();
+        playerHPText.text = "Player HP: <color=red><b>" + playerHP.ToString() + "</b></color>";
     }
 
      public void SetPlayerHP(int n)

@@ -26,6 +26,11 @@ public class TurnTheRope : MonoBehaviour
         speed += n;
     }
 
+    public static float getRopeSpeed()
+    {
+        return speed;
+    }
+
     void OnTriggerEnter(Collider col) 
     { 
         if(col.CompareTag("Player"))
@@ -43,10 +48,12 @@ public class TurnTheRope : MonoBehaviour
         {
             ScoreCount.UpdateScore(1);
             successText.SetActive(true);
+            
+           
             if (ScoreCount.score == 5)
             {
-                GameObject boss = GameObject.FindGameObjectWithTag("Boss");
-                boss.SendMessage("AttackBoss");
+                     GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+                    boss.SendMessage("AttackBoss");
             }
         }
     }

@@ -35,7 +35,7 @@ public class BossAttackTime : MonoBehaviour
             playerHPText.SendMessage("SetPlayerHP", 1);
             ResetAttackTime();
         }
-        text.text =  "Attack Time: " +  Mathf.Ceil(bossAttackTime).ToString();
+        text.text = "<color=red><b>" +  Mathf.Ceil(bossAttackTime).ToString() + "</b></color>";
     }
 
     public void ResetAttackTime()

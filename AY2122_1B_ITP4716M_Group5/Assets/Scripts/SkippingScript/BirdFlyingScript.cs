@@ -4,33 +4,21 @@ using UnityEngine;
 
 public class BirdFlyingScript : MonoBehaviour
 {
-    private float speed = 6f;
-    private float times/* = Random.Range(1, 10)*/;
+    private float speed;
 
-    public GameObject copy;
-
+    private void Start()
+    {
+        speed = Random.Range(6, 11);
+    }
 
 
     // Update is called once per frame
     void Update()
     {
-        times -= Time.deltaTime;
-        if(times <= 0)
-        {
-            transform.Translate(-(speed * Time.deltaTime), 0, 0);  
-        }
+            transform.Translate(-(speed * Time.deltaTime), 0, 0);
+            Destroy(this.gameObject, 5f);
 
     }
-
-    //void OnTriggerEnter(Collider col)
-    //{
-    //    if (col.CompareTag("Player"))
-    //    {
-    //        Instantiate(copy, new Vector3(17f, 1.5f, 9.3f), Quaternion.identity);
-
-    //        Destroy(this);
-    //    }
-    //}
 
 
 }
