@@ -112,32 +112,32 @@ public class CardGenerator : MonoBehaviour
         //Debug.Log("cardPos[1]: " + cardPos[1].name);
     }
 
-    public void ResetCard(GameObject[] card)
-    {
-        GameObject gobjTemp;
-        int first, second;
+    //public void ResetCard(GameObject[] card)
+    //{
+    //    GameObject gobjTemp;
+    //    int first, second;
 
-        for (int i = 0; i < 40; i++)
-        {
-            first = Random.Range(0, 20);
-            second = Random.Range(0, 20);
+    //    for (int i = 0; i < 40; i++)
+    //    {
+    //        first = Random.Range(0, 20);
+    //        second = Random.Range(0, 20);
 
-            swapCard(card[first], card[second]);
+    //        swapCard(card[first], card[second]);
 
-            gobjTemp = card[first];
-            card[first] = card[second];
-            card[second] = gobjTemp;
-        }
+    //        gobjTemp = card[first];
+    //        card[first] = card[second];
+    //        card[second] = gobjTemp;
+    //    }
 
-    }
+    //}
 
-    private void swapCard(GameObject card1, GameObject card2)
-    {
-        Vector3 temp = new Vector3(card1.transform.position.x, 
-                                   card1.transform.position.y,
-                                   card1.transform.position.z);
+    //private void swapCard(GameObject card1, GameObject card2)
+    //{
+    //    Vector3 temp = new Vector3(card1.transform.position.x, 
+    //                               card1.transform.position.y,
+    //                               card1.transform.position.z);
 
-        card1.transform.position = Vector3.MoveTowards(card2.transform.position, card1.transform.position, 1);
-        card2.transform.position = Vector3.MoveTowards(temp, card2.transform.position, 1);
-    }
+    //    card1.transform.position = Vector3.MoveTowards(card2.transform.position, card1.transform.position, 1);
+    //    card2.transform.position = Vector3.MoveTowards(temp, card2.transform.position, 1);
+    //}
 }

@@ -37,4 +37,9 @@ public class CardRotate : MonoBehaviour
             targetRotY += 180;
         }
     }
+
+    //public GameObject getSelectedCard()
+    //{
+    //    return
+    //}
 }
