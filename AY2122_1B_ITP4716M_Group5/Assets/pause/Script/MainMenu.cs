@@ -41,4 +41,12 @@ public class MainMenu : MonoBehaviour
         option.SetActive(false);
         mainmenu.SetActive(true);
     }
+    public void MuteOn()
+    {
+        AudioListener.volume = 1;
+    }
+    public void MuteOff()
+    {
+        AudioListener.volume = 0;
+    }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.51802385, g: 0.55566007, b: 0.58738583, a: 1}
+  m_IndirectSpecularColor: {r: 0.51988363, g: 0.5575551, b: 0.5894223, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1526,6 +1526,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
   m_PrefabInstance: {fileID: 605992832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &477595977 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 605992832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477595974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496477416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,6 +1839,7 @@ MonoBehaviour:
   IsPause: 0
   option: {fileID: 1370693099}
   FPSController: {fileID: 477595974}
+  fpc: {fileID: 477595977}
 --- !u!4 &587296501
 Transform:
   m_ObjectHideFlags: 0
@@ -3638,7 +3650,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1022000969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 587296500}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: MuteOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1022000969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5699,7 +5723,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1809475603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 587296500}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: MuteOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1809475603
 MonoBehaviour:
   m_ObjectHideFlags: 0

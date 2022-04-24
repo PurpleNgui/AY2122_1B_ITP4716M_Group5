@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject FPSController;
 
+    [SerializeField]
+    FirstPersonController fpc;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,7 @@ public class PauseMenu : MonoBehaviour
             {
                 Resume();
                 option.SetActive(false);
+                fpc.SetCursorLock(true);
             } else
             {
                 Pause();
@@ -46,6 +50,8 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
         IsPause = false;
+        fpc.SetCursorLock(true);
+        AudioListener.volume = 1;
     }
 
     public void Pause()
@@ -53,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         Time.timeScale = 0f;
         IsPause = true;
+        AudioListener.volume = 0;
     }
     public void Menu()
     {
@@ -64,6 +71,7 @@ public class PauseMenu : MonoBehaviour
     {
         option.SetActive(true);
         pauseUI.SetActive(false);
+        fpc.SetCursorLock(false);
     }
 
     public void Back()
@@ -76,6 +84,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainScene");
         FPSController.SetActive(false);
+    }
+    public void MuteOn()
+    {
+        AudioListener.volume = 1;
+        fpc.SetCursorLock(false);
+    }
+    public void MuteOff()
+    {
+        AudioListener.volume = 0;
+        fpc.SetCursorLock(false);
     }
 }
 
