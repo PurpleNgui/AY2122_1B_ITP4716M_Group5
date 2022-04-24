@@ -23,6 +23,7 @@ EditorUserSettings:
     RecentlyUsedScenePath-5:
       value: 22424703114646680e0b0227036c6c1b1f070823222f15332827187df7ee3d2cfb
       flags: 0
+<<<<<<< Updated upstream
     RecentlyUsedScenePath-6:
       value: 224247031146464b0c1b1f275f105c1518120b651c29332328691036ecf57a2decee22f0
       flags: 0
@@ -40,6 +41,19 @@ EditorUserSettings:
       flags: 0
     UnityEditor.ShaderGraph.InspectorWindow:
       value: 18135939215a0a5004000b0e15254b524c1119263f2d6a722016393ce1eb3d36e5d339f9a5602b2e2c07a37e0901373ae01e0008f707250d171df81a53a5405d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd88908fecb0f9cfddf1eff4e7a1b1eae482f0fcaee9e1928b86d888ed969f918797a7cf
+=======
+    RecentlyUsedScenePath-1:
+      value: 22424703114646680e0b0227036c6c1b1f070823222f15332827187df7ee3d2cfb
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c72151b180a330b292b351e2a183de7ae2136ebf32f
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 224247031146464b0c1b1f275f105c1518120b651f3c272239691036ecf57a2decee22f0
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 224247031146464b0c1b1f275f105c1518120b651c29332328691036ecf57a2decee22f0
+>>>>>>> Stashed changes
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
