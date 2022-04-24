@@ -14,7 +14,7 @@ public class CountDownTimer : MonoBehaviour
     private float second = 0;
     public bool isRunning = true;
 
-    [SerializeField]
+    //[SerializeField]
     private Text text;
 
     [SerializeField]
@@ -24,7 +24,7 @@ public class CountDownTimer : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
-        GameOver = GameObject.Find("GameOverText");
+        //GameOver = GameObject.Find("GameOverText");
         //GameOver.SetActive(false);
     }
 

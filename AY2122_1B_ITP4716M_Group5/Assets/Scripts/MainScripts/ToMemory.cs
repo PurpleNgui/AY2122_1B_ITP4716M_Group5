@@ -25,9 +25,9 @@ public class ToMemory : MonoBehaviour
     {
         if (collision.gameObject.name == "FPSController")
         {
-            Debug.Log("Touch");
+            //Debug.Log("Touch");
             SceneManager.LoadScene("MemoryGameScene");
-            FPSController.SetActive(false);
+            //FPSController.SetActive(false);
         }
     }
 }
