@@ -3,7 +3,8 @@ guid: 8e88da560d1bdf541a5cb756bb1dfe61
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - flipsound: {fileID: 8300000, guid: 51b3c8e4de3c64844ae4a3a32e8300bb, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

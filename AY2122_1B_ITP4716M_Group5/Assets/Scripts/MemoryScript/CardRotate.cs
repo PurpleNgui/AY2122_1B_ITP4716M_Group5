@@ -6,6 +6,8 @@ public class CardRotate : MonoBehaviour
 {
     private float anglePerFrame = 2;
 
+    public AudioClip flipsound;
+
     private float targetRotY;
     private float fCurrentRotY;
 
@@ -35,6 +37,8 @@ public class CardRotate : MonoBehaviour
         if (!IsRotate())
         {
             targetRotY += 180;
+
+            AudioSource.PlayClipAtPoint(flipsound, transform.position);
         }
 
         //Debug.Log("Select " + name);

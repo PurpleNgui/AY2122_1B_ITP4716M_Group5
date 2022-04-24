@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e88da560d1bdf541a5cb756bb1dfe61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flipsound: {fileID: 8300000, guid: 51b3c8e4de3c64844ae4a3a32e8300bb, type: 3}
 --- !u!1 &2295777452422497745
 GameObject:
   m_ObjectHideFlags: 0
