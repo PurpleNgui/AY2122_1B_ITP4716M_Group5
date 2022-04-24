@@ -71,6 +71,11 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         option.SetActive(false);
     }
-
+    public void Lobby()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainScene");
+        FPSController.SetActive(false);
+    }
 }
 
