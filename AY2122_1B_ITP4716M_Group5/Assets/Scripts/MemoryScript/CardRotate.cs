@@ -36,6 +36,8 @@ public class CardRotate : MonoBehaviour
         {
             targetRotY += 180;
         }
+
+        //Debug.Log("Select " + name);
     }
 
     //public GameObject getSelectedCard()
