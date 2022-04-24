@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.97390145, g: 1.0934936, b: 1.2593237, a: 1}
+  m_IndirectSpecularColor: {r: 0.97390515, g: 1.0935011, b: 1.2593337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -330,6 +330,7 @@ MonoBehaviour:
   IsPause: 0
   option: {fileID: 1412891232}
   FPSController: {fileID: 1862664773}
+  fpc: {fileID: 0}
 --- !u!4 &332861166
 Transform:
   m_ObjectHideFlags: 0
@@ -676,6 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438357564}
+  - component: {fileID: 438357565}
   - component: {fileID: 438357563}
   m_Layer: 0
   m_Name: BGM
@@ -794,6 +796,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &438357565
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438357562}
+  m_Enabled: 1
 --- !u!1 &462881217
 GameObject:
   m_ObjectHideFlags: 0
