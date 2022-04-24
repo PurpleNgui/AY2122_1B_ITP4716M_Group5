@@ -7,6 +7,8 @@ public class TurnTheRope : MonoBehaviour
 {
     private static float speed = 200f;
 
+    public AudioClip skipsound;
+
     [SerializeField]
     private int invalidShipping = 0;
 
@@ -48,8 +50,9 @@ public class TurnTheRope : MonoBehaviour
         {
             ScoreCount.UpdateScore(1);
             successText.SetActive(true);
-            
-           
+            AudioSource.PlayClipAtPoint(skipsound, transform.position);
+
+
             if (ScoreCount.score == 5)
             {
                      GameObject boss = GameObject.FindGameObjectWithTag("Boss");
