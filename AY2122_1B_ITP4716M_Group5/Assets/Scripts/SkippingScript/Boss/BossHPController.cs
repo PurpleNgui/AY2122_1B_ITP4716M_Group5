@@ -9,9 +9,17 @@ public class BossHPController : MonoBehaviour
 
     public GameObject win;
 
+    [SerializeField]
+    private GameObject bgm;
+
+    [SerializeField]
+    private GameObject defeat;
+
     void Start()        //設BossHPA最大量 = 1
     {
         bossHP.value = 1;
+        bgm.SetActive(true);
+        defeat.SetActive(false);
     }
 
     public void AttackBoss()        //玩家攻擊Boss(血量-20%)  重設跳繩次數 = 0  重設Boss攻擊時間  血量 <= 0(Boss和BossHP會消失, 跳出WIN信息)
@@ -29,6 +37,8 @@ public class BossHPController : MonoBehaviour
             Destroy(boss);
             win.SetActive(true);
             bossHP.enabled = false;
+            bgm.SetActive(false);
+            defeat.SetActive(true);
         }
     }
 
