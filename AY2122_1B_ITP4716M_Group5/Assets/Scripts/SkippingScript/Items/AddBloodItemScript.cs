@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AddBloodItemScript : MonoBehaviour
 {
+    private float speed = 10f;
+
     public Transform target;
 
     GameObject playerHPText;
@@ -19,6 +21,7 @@ public class AddBloodItemScript : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider col)
@@ -28,5 +31,10 @@ public class AddBloodItemScript : MonoBehaviour
             playerHPText.SendMessage("SetPlayerHP", -1);
             Destroy(this.gameObject);
         }
+    }
+
+    private void OnMouseDown()
+    {
+        Destroy(this.gameObject);
     }
 }

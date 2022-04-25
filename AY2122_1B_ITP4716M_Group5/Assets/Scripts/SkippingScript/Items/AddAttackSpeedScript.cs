@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AddAttackSpeedScript : MonoBehaviour
 {
-    //private float speed = 10f;
+    private float speed = 10f;
 
     public Transform target;
 
@@ -16,8 +16,7 @@ public class AddAttackSpeedScript : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
-        //Debug.DrawLine(transform.position, target.position, Color.green);
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
     }
 
@@ -30,5 +29,8 @@ public class AddAttackSpeedScript : MonoBehaviour
         }
     }
 
-
+    private void OnMouseDown()
+    {
+        Destroy(this.gameObject);
+    }
 }

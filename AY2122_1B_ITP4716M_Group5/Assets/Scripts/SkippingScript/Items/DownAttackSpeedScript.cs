@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DownAttackSpeedScript : MonoBehaviour
 {
+    private float speed = 10f;
+
     public Transform target;
 
     // Start is called before the first frame update
@@ -16,8 +18,8 @@ public class DownAttackSpeedScript : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-       
     }
 
     void OnTriggerEnter(Collider col)
