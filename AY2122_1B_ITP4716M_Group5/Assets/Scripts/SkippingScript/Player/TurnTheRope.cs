@@ -53,7 +53,7 @@ public class TurnTheRope : MonoBehaviour
             AudioSource.PlayClipAtPoint(skipsound, transform.position);
 
 
-            if (ScoreCount.score == 5)
+            if (ScoreCount.score >= 5)
             {
                      GameObject boss = GameObject.FindGameObjectWithTag("Boss");
                     boss.SendMessage("AttackBoss");
