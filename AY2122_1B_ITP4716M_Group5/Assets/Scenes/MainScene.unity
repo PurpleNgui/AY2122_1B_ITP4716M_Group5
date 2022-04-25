@@ -17157,7 +17157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59feedeea836d3d4fabc079aa59c7cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPSController: {fileID: 0}
+  FPSController: {fileID: 1839120027}
 --- !u!54 &1163424252
 Rigidbody:
   m_ObjectHideFlags: 0
