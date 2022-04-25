@@ -19,6 +19,12 @@ public class PauseMenu : MonoBehaviour
     private GameObject FPSController;
 
     [SerializeField]
+    private GameObject MusicOn;
+
+    [SerializeField]
+    private GameObject MusicOff;
+
+    [SerializeField]
     FirstPersonController fpc;
 
     // Start is called before the first frame update
@@ -26,6 +32,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseUI.SetActive(false);
         option.SetActive(false);
+        SetSoundState();
     }
 
     // Update is called once per frame
@@ -51,7 +58,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         IsPause = false;
         fpc.SetCursorLock(true);
-        AudioListener.volume = 1;
+        //AudioListener.volume = 1;
     }
 
     public void Pause()
@@ -59,7 +66,7 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         Time.timeScale = 0f;
         IsPause = true;
-        AudioListener.volume = 0;
+        //AudioListener.volume = 0;
     }
     public void Menu()
     {
@@ -85,15 +92,34 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainScene");
         FPSController.SetActive(false);
     }
-    public void MuteOn()
+    public void Mute()
     {
-        AudioListener.volume = 1;
-        fpc.SetCursorLock(false);
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Muted", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Muted", 0);
+        }
+
+        SetSoundState();
     }
-    public void MuteOff()
+
+    public void SetSoundState()
     {
-        AudioListener.volume = 0;
-        fpc.SetCursorLock(false);
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            AudioListener.volume = 1;
+            MusicOn.SetActive(true);
+            MusicOff.SetActive(false);
+        }
+        else
+        {
+            AudioListener.volume = 0;
+            MusicOn.SetActive(false);
+            MusicOff.SetActive(true);
+        }
     }
 }
 

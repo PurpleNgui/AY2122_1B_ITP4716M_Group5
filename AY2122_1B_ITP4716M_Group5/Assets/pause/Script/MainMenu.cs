@@ -11,11 +11,15 @@ public class MainMenu : MonoBehaviour
     private GameObject option;
 
     [SerializeField]
-    private GameObject Camera;
+    private GameObject MusicOn;
+
+    [SerializeField]
+    private GameObject MusicOff;
 
     void Start()
     {
         option.SetActive(false);
+        SetSoundState();
     }
     public void PlayGame()
     {
@@ -41,12 +45,33 @@ public class MainMenu : MonoBehaviour
         option.SetActive(false);
         mainmenu.SetActive(true);
     }
-    public void MuteOn()
+    public void Mute()
     {
-        AudioListener.volume = 1;
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Muted", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Muted", 0);
+        }
+
+        SetSoundState();
     }
-    public void MuteOff()
+
+    public void SetSoundState()
     {
-        AudioListener.volume = 0;
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            AudioListener.volume = 1;
+            MusicOn.SetActive(true);
+            MusicOff.SetActive(false);
+        }
+        else
+        {
+            AudioListener.volume = 0;
+            MusicOn.SetActive(false);
+            MusicOff.SetActive(true);
+        }
     }
 }
