@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
                 //SceneManager.LoadScene("Menu");
                 WinText.SetActive(true);
                 ReturnButton.SetActive(true);
+                GetComponent<CountDownTimer>().setIsRunning(false);
             }
         }
 

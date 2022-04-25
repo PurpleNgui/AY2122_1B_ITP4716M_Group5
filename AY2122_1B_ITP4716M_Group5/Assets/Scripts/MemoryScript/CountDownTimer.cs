@@ -85,4 +85,9 @@ public class CountDownTimer : MonoBehaviour
             ReturnButton.SetActive(true);
         }
     }
+
+    public void setIsRunning(bool run)
+    {
+        isRunning = run;
+    }
 }

@@ -21,6 +21,9 @@ public class Card : MonoBehaviour
 
     private GameObject _manager;
 
+    [SerializeField]
+    private AudioClip flipSound;
+
     private void Start()
     {
         _state = 1;
@@ -45,9 +48,15 @@ public class Card : MonoBehaviour
         }
 
         if (_state == 0 && !DO_NOT)
+        {
             GetComponent<Image>().sprite = _cardBack;
+            AudioSource.PlayClipAtPoint(flipSound, transform.position);
+        }
         else if (_state == 1 && !DO_NOT)
+        {
             GetComponent<Image>().sprite = _cardFront;
+            AudioSource.PlayClipAtPoint(flipSound, transform.position);
+        }
     }
 
     public int cardValue
