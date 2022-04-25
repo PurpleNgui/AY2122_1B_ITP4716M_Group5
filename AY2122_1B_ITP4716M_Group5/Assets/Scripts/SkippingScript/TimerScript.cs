@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
@@ -9,15 +8,10 @@ public class TimerScript : MonoBehaviour
     float successTime = 1f;
     float aasTime = 5f;
     float dasTime = 4f;
-    float startTime = 3f;
 
-    public Text startCountDown;
-
-    public GameObject startCountDownText;
     public GameObject missText;
     public GameObject successText;
     public GameObject Birds;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -65,20 +59,6 @@ public class TimerScript : MonoBehaviour
                 TurnTheRope.setRopeSpeed(100); ;
                 dasTime = 5f;
             }
-        }
-
-        if (RulesScript.getIsStartGame())
-        {
-            startCountDownText.SetActive(true);
-            if (startTime > 0)
-            {
-                startTime -= Time.deltaTime;
-            }
-            else
-            {
-                startCountDownText.SetActive(false);
-            }
-            startCountDown.text = "<color=red><b>" + Mathf.Ceil(startTime).ToString() + "</b></color>";
         }
     }
 
