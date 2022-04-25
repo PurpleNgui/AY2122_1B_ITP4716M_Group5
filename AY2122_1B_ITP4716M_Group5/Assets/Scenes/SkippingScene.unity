@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.51802385, g: 0.55566007, b: 0.58738583, a: 1}
+  m_IndirectSpecularColor: {r: 0.51802385, g: 0.5556601, b: 0.5873859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4246,7 +4246,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.166
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6806,7 +6806,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6af56ca70e29a364c980bb6e6b92222a, type: 3}
 --- !u!4 &2073487188 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6af56ca70e29a364c980bb6e6b92222a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 2073487187}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &246467045249435520
