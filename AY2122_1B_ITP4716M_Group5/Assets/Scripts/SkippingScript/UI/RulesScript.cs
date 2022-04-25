@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class RulesScript : MonoBehaviour
 {
+    float startTime = 3f;
+
+    public Text startCountDown;
+
+    public GameObject startCountDownText;
+
     public GameObject nextPageBtn;
     public GameObject lastPageBtn;
     public GameObject closeBtn;
@@ -16,12 +22,25 @@ public class RulesScript : MonoBehaviour
 
     private int currentPage = 1;
 
-    private bool IsStartGame = false;
+    private static bool IsStartGame = false;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void Update()
     {
-        //page1.SetActive(false);
+        if (getIsStartGame())
+        {
+            startCountDownText.SetActive(true);
+            if (startTime > 0)
+            {
+                startTime -= Time.deltaTime;
+            }
+            else
+            {
+                startCountDownText.SetActive(false);
+                Destroy(this.gameObject);
+            }
+            startCountDown.text = "<color=red><b>" + Mathf.Ceil(startTime).ToString() + "</b></color>";
+        }
     }
 
     public void NextPage()
@@ -69,9 +88,10 @@ public class RulesScript : MonoBehaviour
     {
         IsStartGame = true;
 
+
     }
 
-    public bool getIsStartGame()
+    public static bool getIsStartGame()
     {
         return IsStartGame;
     }
