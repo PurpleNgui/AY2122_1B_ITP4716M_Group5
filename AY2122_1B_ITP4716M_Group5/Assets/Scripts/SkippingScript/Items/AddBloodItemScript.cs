@@ -6,6 +6,8 @@ public class AddBloodItemScript : MonoBehaviour
 {
     private float speed = 10f;
 
+    private float time = 5f;
+
     public Transform target;
 
     GameObject playerHPText;
@@ -21,7 +23,15 @@ public class AddBloodItemScript : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate((-Vector3.forward) * speed * Time.deltaTime, Space.World);
+
+        time -= Time.deltaTime;
+        if (time <= 0)
+        {
+            playerHPText.SendMessage("SetPlayerHP", -1);
+            Destroy(this.gameObject);
+            time = 5f;
+        }
     }
 
     void OnTriggerEnter(Collider col)

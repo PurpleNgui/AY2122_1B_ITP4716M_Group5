@@ -23,19 +23,22 @@ public class BossAttackTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject playerHPText = GameObject.Find("PlayerHPText");
-        
+        if (RulesScript.GetStartGame())
+        {
+            GameObject playerHPText = GameObject.Find("PlayerHPText");
 
-        if (bossAttackTime > 0)
-        {
-            bossAttackTime -= Time.deltaTime;
+
+            if (bossAttackTime > 0)
+            {
+                bossAttackTime -= Time.deltaTime;
+            }
+            else
+            {
+                playerHPText.SendMessage("SetPlayerHP", 1);
+                ResetAttackTime();
+            }
+            text.text = "<color=red><b>" + Mathf.Ceil(bossAttackTime).ToString() + "</b></color>";
         }
-        else
-        {
-            playerHPText.SendMessage("SetPlayerHP", 1);
-            ResetAttackTime();
-        }
-        text.text = "<color=red><b>" +  Mathf.Ceil(bossAttackTime).ToString() + "</b></color>";
     }
 
     public void ResetAttackTime()

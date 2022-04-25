@@ -19,7 +19,9 @@ public class TurnTheRope : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.right * speed * Time.deltaTime);
+        if(RulesScript.GetStartGame()) {
+            transform.Rotate(Vector3.right * speed * Time.deltaTime);
+        }
 
     }
 

@@ -10,6 +10,8 @@ public class ThrowItmeScript : MonoBehaviour
 
     private GameObject boss;
 
+    public Transform target;
+
     private float times = 5f;
 
     private void Start()
@@ -20,23 +22,33 @@ public class ThrowItmeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (RulesScript.GetStartGame())
+        {
             times -= Time.deltaTime;
             if (times <= 0)
             {
                 GameObject obj = (GameObject)Instantiate(RandomItem());
-                
-                int x = Random.Range(0, 8);
-                int y = Random.Range(1, 8);
+                //AddBloodItemScript abItem = obj.GetComponent<AddBloodItemScript>();
+                //AddAttackSpeedScript aasItem = obj.GetComponent<AddAttackSpeedScript>();
+                //DownAttackSpeedScript dasItem = obj.GetComponent<DownAttackSpeedScript>();
+
+                //abItem.target = target;
+                //aasItem.target = target;
+                //dasItem.target = target;
+
+                int x = Random.Range(2, 6);
+                int y = Random.Range(3, 6);
 
                 obj.transform.position = new Vector3(x, y, 25);
 
                 times = Random.Range(5, 10);
             }
+        }
     }
 
     GameObject RandomItem()
     {
-  
+
         float randomNum = Random.Range(0, 10);
         //Debug.Log("randomNum: " + randomNum);
 
@@ -46,5 +58,6 @@ public class ThrowItmeScript : MonoBehaviour
             return aasItem;
         else
             return dasItem;
+
     }
 }

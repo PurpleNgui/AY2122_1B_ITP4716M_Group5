@@ -6,6 +6,8 @@ public class DownAttackSpeedScript : MonoBehaviour
 {
     private float speed = 10f;
 
+    private float time = 5f;
+
     public Transform target;
 
     // Start is called before the first frame update
@@ -18,7 +20,17 @@ public class DownAttackSpeedScript : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate((-Vector3.forward) * speed * Time.deltaTime, Space.World);
+
+     
+         time -= Time.deltaTime;
+        if (time <= 0)
+        {
+                     TurnTheRope.setRopeSpeed(-100);
+                      Destroy(this.gameObject);
+            time = 5f;
+        }
+  
 
     }
 

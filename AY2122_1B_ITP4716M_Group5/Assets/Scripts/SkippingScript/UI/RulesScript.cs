@@ -22,7 +22,7 @@ public class RulesScript : MonoBehaviour
     private int currentPage = 1;
 
     private bool IsStartGame = false;
-    private bool startGame = false;
+    private static bool startGame = false;
 
     private void Update()
     {
@@ -88,5 +88,8 @@ public class RulesScript : MonoBehaviour
 
     }
 
-
+    public static bool GetStartGame()
+    {
+        return startGame;
+    }
 }
