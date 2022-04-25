@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject cardFront;
+    //[SerializeField]
+    //private GameObject cardFront;
 
-    public void SetCardFrontMat(Material cardFrontMat)
-    {
-        cardFront.GetComponent<Renderer>().material = cardFrontMat;
-    }
+    //public void SetCardFrontMat(Material cardFrontMat)
+    //{
+    //    cardFront.GetComponent<Renderer>().material = cardFrontMat;
+    //}
 
-    public Material SetCardFrontTex(Texture2D cardFrontTex)
-    {
-        Renderer cardRenderer = cardFront.GetComponent<Renderer>();
-        cardRenderer.material.mainTexture = cardFrontTex;
-        return cardRenderer.material;
-    }
+    //public Material SetCardFrontTex(Texture2D cardFrontTex)
+    //{
+    //    Renderer cardRenderer = cardFront.GetComponent<Renderer>();
+    //    cardRenderer.material.mainTexture = cardFrontTex;
+    //    return cardRenderer.material;
+    //}
 }

@@ -20,6 +20,9 @@ public class CountDownTimer : MonoBehaviour
     [SerializeField]
     private GameObject GameOver;
 
+    [SerializeField]
+    private GameObject CardList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +77,8 @@ public class CountDownTimer : MonoBehaviour
         {
             timer = 0;
             isRunning = false;
-            //GameOver.SetActive(true);
+            GameOver.SetActive(true);
+            CardList.SetActive(false);
         }
     }
 }
