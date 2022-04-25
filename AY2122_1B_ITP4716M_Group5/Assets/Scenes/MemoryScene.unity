@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0e15b37bcc9cf46bd3c0ef2811d4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 300
   isRunning: 1
   GameOver: {fileID: 2147089469}
   CardList: {fileID: 730248905}
