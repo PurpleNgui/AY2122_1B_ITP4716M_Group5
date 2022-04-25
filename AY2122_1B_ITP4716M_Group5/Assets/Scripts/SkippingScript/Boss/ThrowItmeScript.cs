@@ -24,6 +24,7 @@ public class ThrowItmeScript : MonoBehaviour
             if (times <= 0)
             {
                 GameObject obj = (GameObject)Instantiate(RandomItem());
+                
                 int x = Random.Range(0, 8);
                 int y = Random.Range(1, 8);
 
@@ -35,6 +36,7 @@ public class ThrowItmeScript : MonoBehaviour
 
     GameObject RandomItem()
     {
+  
         float randomNum = Random.Range(0, 10);
         //Debug.Log("randomNum: " + randomNum);
 
