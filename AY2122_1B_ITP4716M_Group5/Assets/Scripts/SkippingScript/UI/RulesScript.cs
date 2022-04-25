@@ -26,7 +26,6 @@ public class RulesScript : MonoBehaviour
 
     public void NextPage()
     {
-        Debug.Log("touched, now in page" + currentPage);
         if(currentPage == 1)
         {
             page1.SetActive(false);
@@ -47,10 +46,12 @@ public class RulesScript : MonoBehaviour
 
     public void LastPage()
     {
-        if(currentPage == 2)
+        if (currentPage == 2)
         {
             page2.SetActive(false);
             page1.SetActive(true);
+            nextPageBtn.SetActive(true);
+            startBtn.SetActive(false);
             currentPage--;
             lastPageBtn.SetActive(false);
         }
@@ -59,9 +60,19 @@ public class RulesScript : MonoBehaviour
             page3.SetActive(false);
             page2.SetActive(true);
             nextPageBtn.SetActive(true);
+            startBtn.SetActive(false);
             currentPage--;
         }
     }
 
+    public void StartGame()
+    {
+        IsStartGame = true;
 
+    }
+
+    public bool getIsStartGame()
+    {
+        return IsStartGame;
+    }
 }
