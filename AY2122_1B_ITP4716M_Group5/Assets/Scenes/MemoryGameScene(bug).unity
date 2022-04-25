@@ -5243,8 +5243,7 @@ MonoBehaviour:
   - {fileID: 524801897}
   - {fileID: 1579036100}
   - {fileID: 601790051}
-  winText: {fileID: 2037766714}
-  returnButton: {fileID: 965999027}
+  matchText: {fileID: 0}
 --- !u!4 &1468672645
 Transform:
   m_ObjectHideFlags: 0

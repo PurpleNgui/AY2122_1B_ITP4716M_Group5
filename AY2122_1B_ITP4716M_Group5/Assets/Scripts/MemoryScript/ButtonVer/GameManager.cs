@@ -2,23 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite[] cardFront;
-
-    [SerializeField]
-    private Sprite cardBack;
-
-    [SerializeField]
-    private GameObject[] cards;
+    public Sprite[] cardFront;
+    public Sprite cardBack;
+    public GameObject[] cards;
+    public Text matchText;
     
     [SerializeField]
-    private GameObject winText;
+    private GameObject WinText;
 
     [SerializeField]
-    private GameObject returnButton;
+    private GameObject ReturnButton;
 
     private bool _init = false;
     private int _matches = 10;
@@ -43,15 +40,15 @@ public class GameManager : MonoBehaviour
                 while (!test)
                 {
                     choice = Random.Range(0, cards.Length);
-                    test = !(cards[choice].GetComponent<ButtonCard>().initialized);
+                    test = !(cards[choice].GetComponent<Card>().initialized);
                 }
-                cards[choice].GetComponent<ButtonCard>().cardValue = i;
-                cards[choice].GetComponent<ButtonCard>().initialized = true;
+                cards[choice].GetComponent<Card>().cardValue = i;
+                cards[choice].GetComponent<Card>().initialized = true;
             }
         }
 
         foreach (GameObject c in cards)
-            c.GetComponent<ButtonCard>().setupGraphics();
+            c.GetComponent<Card>().setupGraphics();
 
         if (!_init)
             _init = true;
@@ -73,7 +70,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < cards.Length; i++)
         {
-            if (cards[i].GetComponent<ButtonCard>().state == 1)
+            if (cards[i].GetComponent<Card>().state == 1)
                 c.Add(i);
         }
 
@@ -83,25 +80,27 @@ public class GameManager : MonoBehaviour
 
     void cardComparison(List<int> c)
     {
-        ButtonCard.DO_NOT = true;
+        Card.DO_NOT = true;
 
         int x = 0;
 
-        if (cards[c[0]].GetComponent<ButtonCard>().cardValue == cards[c[1]].GetComponent<ButtonCard>().cardValue)
+        if (cards[c[0]].GetComponent<Card>().cardValue == cards[c[1]].GetComponent<Card>().cardValue)
         {
             x = 2;
             _matches--;
+            matchText.text = "Number of Matches: " + _matches;
             if (_matches == 0)
             {
-                winText.SetActive(true);
-                returnButton.SetActive(true);
+                //SceneManager.LoadScene("Menu");
+                WinText.SetActive(true);
+                ReturnButton.SetActive(true);
             }
         }
 
         for (int i = 0; i < c.Count; i++)
         {
-            cards[c[i]].GetComponent<ButtonCard>().state = x;
-            cards[c[i]].GetComponent<ButtonCard>().falseCheck();
+            cards[c[i]].GetComponent<Card>().state = x;
+            cards[c[i]].GetComponent<Card>().falseCheck();
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class PrefabsCard : MonoBehaviour
 {
     //[SerializeField]
     //private GameObject cardFront;

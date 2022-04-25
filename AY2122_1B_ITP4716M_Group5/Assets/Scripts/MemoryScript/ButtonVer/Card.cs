@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonCard : MonoBehaviour
+public class Card : MonoBehaviour
 {
     public static bool DO_NOT = false;
 
