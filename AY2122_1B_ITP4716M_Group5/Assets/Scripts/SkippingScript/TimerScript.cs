@@ -67,6 +67,6 @@ public class TimerScript : MonoBehaviour
         float y;
         y = Random.Range(1, 4);
 
-        Instantiate(Birds, new Vector3(17f, y, 9.3f), Quaternion.identity);
+        Instantiate(Birds, new Vector3(17f, y, 10f), Quaternion.identity);
     }
 }

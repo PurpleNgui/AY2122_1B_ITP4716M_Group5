@@ -85,7 +85,7 @@ public class RulesScript : MonoBehaviour
     public void StartGame()
     {
         IsStartGame = true;
-
+        startBtn.SetActive(false);
     }
 
     public static bool GetStartGame()

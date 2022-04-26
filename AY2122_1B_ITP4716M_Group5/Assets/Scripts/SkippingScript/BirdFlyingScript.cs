@@ -8,7 +8,10 @@ public class BirdFlyingScript : MonoBehaviour
 
     private void Start()
     {
-        speed = Random.Range(6, 11);
+        if (RulesScript.GetStartGame())
+        {
+            speed = Random.Range(6, 11);
+        }
     }
 
 
