@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.97390515, g: 1.0935011, b: 1.2593337, a: 1}
+  m_IndirectSpecularColor: {r: 0.97390145, g: 1.0934936, b: 1.2593237, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1182,6 +1182,7 @@ MonoBehaviour:
   isRunning: 1
   GameOver: {fileID: 919040631}
   CardList: {fileID: 0}
+  ReturnButton: {fileID: 0}
 --- !u!114 &354491231
 MonoBehaviour:
   m_ObjectHideFlags: 0
