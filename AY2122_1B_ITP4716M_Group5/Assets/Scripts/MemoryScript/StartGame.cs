@@ -23,4 +23,5 @@ public class StartGame : MonoBehaviour
         cardGenerator.SetActive(true);
         timerText.SetActive(true);
     }
+
 }

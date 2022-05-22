@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkippingScene.unity
     guid: e7dd1c645cfc3a64798757bf171460d7
+  - enabled: 1
+    path: Assets/Scenes/MemoryGameScene(bug).unity
+    guid: 15b4bdcf6f9a6df42b2bed30fe47b5c4
   m_configObjects: {}
