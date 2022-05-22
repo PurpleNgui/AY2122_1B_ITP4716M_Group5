@@ -71,7 +71,7 @@ public class PauseMenu : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Start menu");
+        SceneManager.LoadScene("StartMenu");
         FPSController.SetActive(false);
     }
     public void Option()
