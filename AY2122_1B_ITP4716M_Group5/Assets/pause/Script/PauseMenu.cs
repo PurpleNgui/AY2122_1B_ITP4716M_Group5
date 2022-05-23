@@ -92,13 +92,33 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainScene");
         FPSController.SetActive(false);
     }
-    public void Mute()
+    //public void Mute()
+    //{
+    //    if (PlayerPrefs.GetInt("Muted", 0) == 0)
+    //    {
+    //        PlayerPrefs.SetInt("Muted", 1);
+    //    }
+    //    else
+    //    {
+    //        PlayerPrefs.SetInt("Muted", 0);
+    //    }
+
+    //    SetSoundState();
+    //}
+
+    public void MuteOn()
     {
         if (PlayerPrefs.GetInt("Muted", 0) == 0)
         {
             PlayerPrefs.SetInt("Muted", 1);
         }
-        else
+
+        SetSoundState();
+    }
+
+    public void MuteOff()
+    {
+        if (PlayerPrefs.GetInt("Muted", 0) == 1)
         {
             PlayerPrefs.SetInt("Muted", 0);
         }

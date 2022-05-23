@@ -45,13 +45,33 @@ public class MainMenu : MonoBehaviour
         option.SetActive(false);
         mainmenu.SetActive(true);
     }
-    public void Mute()
+    //public void Mute()
+    //{
+    //    if (PlayerPrefs.GetInt("Muted", 0) == 0)
+    //    {
+    //        PlayerPrefs.SetInt("Muted", 1);
+    //    }
+    //    else
+    //    {
+    //        PlayerPrefs.SetInt("Muted", 0);
+    //    }
+
+    //    SetSoundState();
+    //}
+
+    public void MuteOn()
     {
         if (PlayerPrefs.GetInt("Muted", 0) == 0)
         {
             PlayerPrefs.SetInt("Muted", 1);
         }
-        else
+
+        SetSoundState();
+    }
+
+    public void MuteOff()
+    {
+        if (PlayerPrefs.GetInt("Muted", 0) == 1)
         {
             PlayerPrefs.SetInt("Muted", 0);
         }
