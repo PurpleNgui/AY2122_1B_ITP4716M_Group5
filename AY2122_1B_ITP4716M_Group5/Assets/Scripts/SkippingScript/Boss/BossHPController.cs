@@ -15,11 +15,14 @@ public class BossHPController : MonoBehaviour
     [SerializeField]
     private GameObject defeat;
 
+    public Animator bossAnimator;
+
     void Start()        //設BossHPA最大量 = 1
     {
         bossHP.value = 1;
         bgm.SetActive(true);
         defeat.SetActive(false);
+
     }
 
     public void AttackBoss()        //玩家攻擊Boss(血量-20%)  重設跳繩次數 = 0  重設Boss攻擊時間  血量 <= 0(Boss和BossHP會消失, 跳出WIN信息)
@@ -28,17 +31,22 @@ public class BossHPController : MonoBehaviour
 
         ScoreCount.ResetScore();
         bossHP.value -= 0.2f;
+        bossAnimator.SetBool("isInjred", true);
 
         bat.SendMessage("ResetAttackTime");
 
         if (bossHP.value <= 0)     
         {
             GameObject boss = GameObject.FindGameObjectWithTag("Boss");
-            Destroy(boss);
+
+            bossAnimator.SetBool("isDead", true);
+            //Destroy(boss);
             win.SetActive(true);
             bossHP.enabled = false;
             bgm.SetActive(false);
             defeat.SetActive(true);
+
+            
         }
     }
 

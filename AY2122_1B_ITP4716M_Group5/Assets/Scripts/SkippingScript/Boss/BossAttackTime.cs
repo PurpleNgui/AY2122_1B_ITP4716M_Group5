@@ -9,7 +9,7 @@ public class BossAttackTime : MonoBehaviour
     [SerializeField]
     private float time = 10;
 
-
+    public Animator bossAnimation;
 
     Text text;
 
@@ -18,6 +18,8 @@ public class BossAttackTime : MonoBehaviour
     {
         text = GetComponent<Text>();
         bossAttackTime = time;
+
+        
     }
 
     // Update is called once per frame
@@ -31,9 +33,13 @@ public class BossAttackTime : MonoBehaviour
             if (bossAttackTime > 0)
             {
                 bossAttackTime -= Time.deltaTime;
+                bossAnimation.SetInteger("isAttack", 0);
+                bossAnimation.SetBool("isInjred", false);
             }
             else
             {
+                bossAnimation.SetInteger("isAttack", 1);
+
                 playerHPText.SendMessage("SetPlayerHP", 1);
                 ResetAttackTime();
             }
