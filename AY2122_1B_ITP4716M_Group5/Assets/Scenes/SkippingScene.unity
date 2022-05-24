@@ -5928,6 +5928,7 @@ MonoBehaviour:
   win: {fileID: 40655561}
   bgm: {fileID: 1146096059}
   defeat: {fileID: 668029298}
+  bossAnimator: {fileID: 280846465}
 --- !u!1 &1589401088
 GameObject:
   m_ObjectHideFlags: 0
