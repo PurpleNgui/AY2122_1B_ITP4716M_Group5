@@ -8,10 +8,12 @@ public class TimerScript : MonoBehaviour
     float successTime = 1f;
     float aasTime = 5f;
     float dasTime = 4f;
+    float stophitTime = 3f;
 
     public GameObject missText;
     public GameObject successText;
     public GameObject Birds;
+    public GameObject earth;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,18 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (missText.activeInHierarchy)
+        if (earth.activeInHierarchy)
+        {
+            stophitTime -= Time.deltaTime;
+            if (stophitTime <= 0)
+            {
+                earth.SetActive(false);
+                stophitTime = 3;
+
+            }
+        }
+
+            if (missText.activeInHierarchy)
         {
             missTime -= Time.deltaTime;
             if (missTime <= 0)

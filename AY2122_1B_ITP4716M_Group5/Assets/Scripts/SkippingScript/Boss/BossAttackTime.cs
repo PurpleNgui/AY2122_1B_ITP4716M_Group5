@@ -11,6 +11,8 @@ public class BossAttackTime : MonoBehaviour
 
     public Animator bossAnimation;
 
+    public GameObject earth;
+
     Text text;
 
     // Start is called before the first frame update
@@ -39,6 +41,8 @@ public class BossAttackTime : MonoBehaviour
             else
             {
                 bossAnimation.SetInteger("isAttack", 1);
+
+                earth.SetActive(true);
 
                 playerHPText.SendMessage("SetPlayerHP", 1);
                 ResetAttackTime();
