@@ -947,6 +947,8 @@ MonoBehaviour:
   time: 10
   bossAnimation: {fileID: 280846465}
   earth: {fileID: 1169915841}
+  player: {fileID: 605992835}
+  palyerInjredSound: {fileID: 8300000, guid: fa5f5c6ce326dd844a9fa28af8d635f7, type: 3}
 --- !u!1 &136861858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2259,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 605992832}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &605992835 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 605992832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &634143356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,6 +3181,7 @@ MonoBehaviour:
   successText: {fileID: 1885045713}
   Birds: {fileID: 5809529440278215157, guid: 7a3d4d087d67c684bb0908bac25dfc49, type: 3}
   earth: {fileID: 1169915841}
+  win: {fileID: 40655561}
 --- !u!4 &805781529
 Transform:
   m_ObjectHideFlags: 0
@@ -6128,6 +6137,7 @@ MonoBehaviour:
   bgm: {fileID: 1146096059}
   defeat: {fileID: 668029298}
   bossAnimator: {fileID: 280846465}
+  injredSound: {fileID: 8300000, guid: 13eee08b669313244b4a7d1ace386aa7, type: 3}
 --- !u!1 &1589401088
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,15 +14,26 @@ public class TimerScript : MonoBehaviour
     public GameObject successText;
     public GameObject Birds;
     public GameObject earth;
+    public GameObject win;
+
+    private static bool endGame = false;
+
     // Start is called before the first frame update
     void Start()
     {
+      
         InvokeRepeating("CreatBird", Random.Range(4, 9), Random.Range(5, 11));
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (win.activeInHierarchy && endGame == false)
+        {
+            endGame = true;
+            Debug.Log("end game");
+        }
+
         if (earth.activeInHierarchy)
         {
             stophitTime -= Time.deltaTime;
@@ -34,7 +45,7 @@ public class TimerScript : MonoBehaviour
             }
         }
 
-            if (missText.activeInHierarchy)
+        if (missText.activeInHierarchy)
         {
             missTime -= Time.deltaTime;
             if (missTime <= 0)
@@ -81,5 +92,10 @@ public class TimerScript : MonoBehaviour
         y = Random.Range(1, 4);
 
         Instantiate(Birds, new Vector3(17f, y, 10f), Quaternion.identity);
+    }
+
+    public static bool GetEndGame()
+    {
+        return endGame;
     }
 }

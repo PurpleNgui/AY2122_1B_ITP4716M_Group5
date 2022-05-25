@@ -12,31 +12,37 @@ public class BossAttackTime : MonoBehaviour
     public Animator bossAnimation;
 
     public GameObject earth;
+    
 
     Text text;
+
+    public AudioSource player;
+    public AudioClip palyerInjredSound;
 
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
         bossAttackTime = time;
+      
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (RulesScript.GetStartGame())
+        if (RulesScript.GetStartGame() && TimerScript.GetEndGame() == false)
         {
             GameObject playerHPText = GameObject.Find("PlayerHPText");
+            //GameObject bossATText = GameObject.Find("BossATText");
 
 
             if (bossAttackTime > 0)
             {
                 bossAttackTime -= Time.deltaTime;
                 bossAnimation.SetInteger("isAttack", 0);
-                bossAnimation.SetBool("isInjred", false);
+    
             }
             else
             {
@@ -45,6 +51,7 @@ public class BossAttackTime : MonoBehaviour
                 earth.SetActive(true);
 
                 playerHPText.SendMessage("SetPlayerHP", 1);
+                player.PlayOneShot(palyerInjredSound);
                 ResetAttackTime();
             }
             text.text = "<color=red><b>" + Mathf.Ceil(bossAttackTime).ToString() + "</b></color>";

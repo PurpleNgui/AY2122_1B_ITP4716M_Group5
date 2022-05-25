@@ -22,7 +22,7 @@ public class ThrowItmeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (RulesScript.GetStartGame())
+        if (RulesScript.GetStartGame() && TimerScript.GetEndGame() == false)
         {
             times -= Time.deltaTime;
             if (times <= 0)
