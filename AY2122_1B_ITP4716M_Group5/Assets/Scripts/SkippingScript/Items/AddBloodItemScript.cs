@@ -6,7 +6,7 @@ public class AddBloodItemScript : MonoBehaviour
 {
     private float speed = 10f;
 
-    private float time = 5f;
+    private float time = 2f;
 
     public Transform target;
 
@@ -30,7 +30,7 @@ public class AddBloodItemScript : MonoBehaviour
         {
             playerHPText.SendMessage("SetPlayerHP", -1);
             Destroy(this.gameObject);
-            time = 5f;
+            time = 2f;
         }
     }
 
