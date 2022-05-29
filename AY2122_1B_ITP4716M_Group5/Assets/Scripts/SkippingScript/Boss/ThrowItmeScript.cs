@@ -38,6 +38,7 @@ public class ThrowItmeScript : MonoBehaviour
 
                 int x = Random.Range(2, 6);
                 int y = Random.Range(3, 6);
+                //Debug.Log("x: " + x + ", y: " + y);
 
                 obj.transform.position = new Vector3(x, y, 25);
 

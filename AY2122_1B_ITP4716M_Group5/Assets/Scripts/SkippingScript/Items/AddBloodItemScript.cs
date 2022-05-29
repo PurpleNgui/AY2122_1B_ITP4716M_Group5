@@ -8,7 +8,7 @@ public class AddBloodItemScript : MonoBehaviour
 
     private float time = 2f;
 
-    public Transform target;
+    //public Transform target;
 
     GameObject playerHPText;
 
@@ -22,7 +22,7 @@ public class AddBloodItemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
+        //transform.LookAt(target);
         transform.Translate((-Vector3.forward) * speed * Time.deltaTime, Space.World);
 
         time -= Time.deltaTime;

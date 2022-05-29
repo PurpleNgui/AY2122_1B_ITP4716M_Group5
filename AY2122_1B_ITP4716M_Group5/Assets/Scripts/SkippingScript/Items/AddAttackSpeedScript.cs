@@ -8,7 +8,7 @@ public class AddAttackSpeedScript : MonoBehaviour
 
     private float time = 2f;
 
-    public Transform target;
+    //public Transform target;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class AddAttackSpeedScript : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(target);
+        //transform.LookAt(target);
         transform.Translate((-Vector3.forward) * speed * Time.deltaTime, Space.World);
 
         time -= Time.deltaTime;

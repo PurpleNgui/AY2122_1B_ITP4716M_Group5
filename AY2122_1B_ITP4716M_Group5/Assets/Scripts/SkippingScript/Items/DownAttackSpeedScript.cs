@@ -8,7 +8,7 @@ public class DownAttackSpeedScript : MonoBehaviour
 
     private float time = 2f;
 
-    public Transform target;
+    //public Transform target;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class DownAttackSpeedScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
+        //transform.LookAt(target);
         transform.Translate((-Vector3.forward) * speed * Time.deltaTime, Space.World);
 
      
