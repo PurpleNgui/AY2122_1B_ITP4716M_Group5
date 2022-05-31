@@ -16,6 +16,7 @@ public class TimerScript : MonoBehaviour
     public GameObject Birds;
     public GameObject earth;
     public GameObject win;
+    public GameObject gameOver;
     public GameObject rules;
 
     private float startCountDownTime = 3f;
@@ -60,7 +61,7 @@ public class TimerScript : MonoBehaviour
             startCountDownTimeText.text = Mathf.Ceil(startCountDownTime).ToString();
         }
 
-        if (win.activeInHierarchy && endGame == false)
+        if ((win.activeInHierarchy || gameOver.activeInHierarchy) && endGame == false)
         {
             endGame = true;
             Debug.Log("end game");

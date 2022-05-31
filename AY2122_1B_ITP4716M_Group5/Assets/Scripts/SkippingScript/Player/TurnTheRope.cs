@@ -12,6 +12,8 @@ public class TurnTheRope : MonoBehaviour
     [SerializeField]
     private int invalidShipping = 0;
 
+    private bool miss = false;
+
     public GameObject successText;
     public GameObject missText;
 
@@ -40,6 +42,7 @@ public class TurnTheRope : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             invalidShipping += 1;
+            miss = true;
             missText.SetActive(true);
             
             if (invalidShipping >= 2)
@@ -50,8 +53,13 @@ public class TurnTheRope : MonoBehaviour
         }
         if(col.CompareTag("Scorer"))
         {
-            ScoreCount.UpdateScore(1);
-            successText.SetActive(true);
+            if (!miss)
+            {
+                ScoreCount.UpdateScore(1);
+                successText.SetActive(true);
+            }
+            else
+                miss = false;
             AudioSource.PlayClipAtPoint(skipsound, transform.position);
 
 

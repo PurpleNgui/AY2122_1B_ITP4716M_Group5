@@ -8,7 +8,7 @@ public class BirdFlyingScript : MonoBehaviour
 
     private void Start()
     {
-        if (TimerScript.GetStartGame())
+        if (TimerScript.GetStartGame() && TimerScript.GetEndGame() == false)
         {
             speed = Random.Range(6, 11);
         }
