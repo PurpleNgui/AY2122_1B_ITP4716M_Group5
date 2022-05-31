@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
@@ -15,8 +16,19 @@ public class TimerScript : MonoBehaviour
     public GameObject Birds;
     public GameObject earth;
     public GameObject win;
+    public GameObject rules;
+
+    private float startCountDownTime = 3f;
+
+    public Text startCountDownTimeText;
+
+    public GameObject startCountDownTimeGO;
+
+    private bool IsStartGame = false;
+    private static bool startGame = false;
 
     private static bool endGame = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +40,26 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!rules.activeInHierarchy)
+        {
+            IsStartGame = true;
+        }
+
+        if (IsStartGame)
+        {
+            if (startCountDownTime >= 0)
+            {
+                startCountDownTimeGO.SetActive(true);
+                startCountDownTime -= Time.deltaTime;
+            }
+            else
+            {
+                Destroy(startCountDownTimeGO, 1f);
+                startGame = true;
+            }
+            startCountDownTimeText.text = Mathf.Ceil(startCountDownTime).ToString();
+        }
+
         if (win.activeInHierarchy && endGame == false)
         {
             endGame = true;
@@ -97,5 +129,10 @@ public class TimerScript : MonoBehaviour
     public static bool GetEndGame()
     {
         return endGame;
+    }
+
+    public static bool GetStartGame()
+    {
+        return startGame;
     }
 }

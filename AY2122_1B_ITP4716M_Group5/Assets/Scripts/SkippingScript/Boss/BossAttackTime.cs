@@ -32,7 +32,7 @@ public class BossAttackTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (RulesScript.GetStartGame() && TimerScript.GetEndGame() == false)
+        if (TimerScript.GetStartGame() && TimerScript.GetEndGame() == false)
         {
             GameObject playerHPText = GameObject.Find("PlayerHPText");
             //GameObject bossATText = GameObject.Find("BossATText");

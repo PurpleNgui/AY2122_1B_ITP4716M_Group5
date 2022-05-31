@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class RulesScript : MonoBehaviour
 {
-    private float startCountDownTime = 3f;
+    public GameObject rules;
 
-    public Text startCountDownTimeText;
-
-    public GameObject startCountDownTimeGO;
     public GameObject nextPageBtn;
     public GameObject lastPageBtn;
     public GameObject closeBtn;
@@ -21,25 +18,25 @@ public class RulesScript : MonoBehaviour
 
     private int currentPage = 1;
 
-    private bool IsStartGame = false;
-    private static bool startGame = false;
+    //private bool IsStartGame = false;
+    //private static bool startGame = false;
 
     private void Update()
     {
-        if (IsStartGame)
-        {
-            if (startCountDownTime >= 0)
-            {
-                startCountDownTimeGO.SetActive(true);
-                startCountDownTime -= Time.deltaTime;
-            }
-            else
-            {
-                Destroy(startCountDownTimeGO, 1f);
-                startGame = true;
-            }
-            startCountDownTimeText.text = Mathf.Ceil(startCountDownTime).ToString();
-        }
+        //if (IsStartGame)
+        //{
+        //    if (startCountDownTime >= 0)
+        //    {
+        //        startCountDownTimeGO.SetActive(true);
+        //        startCountDownTime -= Time.deltaTime;
+        //    }
+        //    else
+        //    {
+        //        Destroy(startCountDownTimeGO, 1f);
+        //        startGame = true;
+        //    }
+        //    startCountDownTimeText.text = Mathf.Ceil(startCountDownTime).ToString();
+        //}
     }
     public void NextPage()
     {
@@ -84,12 +81,12 @@ public class RulesScript : MonoBehaviour
 
     public void StartGame()
     {
-        IsStartGame = true;
-        startBtn.SetActive(false);
+        //IsStartGame = true;
+        rules.SetActive(false);
     }
 
-    public static bool GetStartGame()
-    {
-        return startGame;
-    }
+    //public static bool GetStartGame()
+    //{
+    //    return startGame;
+    //}
 }
