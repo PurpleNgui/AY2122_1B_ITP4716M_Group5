@@ -16,9 +16,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private GameObject MusicOff;
 
+    [SerializeField]
+    private GameObject Rules;
+
     void Start()
     {
         option.SetActive(false);
+        Rules.SetActive(false);
         SetSoundState();
     }
     public void PlayGame()
@@ -35,6 +39,7 @@ public class MainMenu : MonoBehaviour
     {
         mainmenu.SetActive(false);
     }
+
     public void Option()
     {
         option.SetActive(true);
@@ -93,5 +98,15 @@ public class MainMenu : MonoBehaviour
             MusicOn.SetActive(false);
             MusicOff.SetActive(true);
         }
+    }
+    public void RulesOn()
+    {
+        mainmenu.SetActive(false);
+        Rules.SetActive(true);
+    }
+    public void RulesOff()
+    {
+        mainmenu.SetActive(true);
+        Rules.SetActive(false);
     }
 }

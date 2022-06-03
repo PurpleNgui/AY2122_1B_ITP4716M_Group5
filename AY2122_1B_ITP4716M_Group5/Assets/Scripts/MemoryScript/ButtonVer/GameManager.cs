@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject ReturnButton;
 
+    [SerializeField]
+    private GameObject ReturnImage;
+
     private bool _init = false;
     private int _matches = 10;
 
@@ -94,6 +97,7 @@ public class GameManager : MonoBehaviour
                 //SceneManager.LoadScene("Menu");
                 WinText.SetActive(true);
                 ReturnButton.SetActive(true);
+                ReturnImage.SetActive(true);
                 GetComponent<CountDownTimer>().setIsRunning(false);
             }
         }
