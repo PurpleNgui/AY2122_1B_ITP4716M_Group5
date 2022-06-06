@@ -38,11 +38,25 @@ public class TurnTheRope : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) 
-    { 
-        if(col.CompareTag("Player"))
+    {
+        //if (col.CompareTag("Player") && col.CompareTag("Scorer"))
+        //{
+        //    invalidShipping += 1;
+        //    miss = true;
+        //    missText.SetActive(true);
+
+        //    if (invalidShipping >= 2)
+        //    {
+        //        ScoreCount.ResetScore();
+        //        invalidShipping = 0;
+        //    }
+        //}
+
+        if (col.CompareTag("Player"))
         {
+            //Debug.Log("touch");
             invalidShipping += 1;
-            miss = true;
+            //miss = true;
             missText.SetActive(true);
             
             if (invalidShipping >= 2)
@@ -51,15 +65,16 @@ public class TurnTheRope : MonoBehaviour
                 invalidShipping = 0;
             }
         }
+
         if(col.CompareTag("Scorer"))
         {
-            if (!miss)
-            {
-                ScoreCount.UpdateScore(1);
+            //    if (!miss)
+            //    {
+            ScoreCount.UpdateScore(1);
                 successText.SetActive(true);
-            }
-            else
-                miss = false;
+            //}
+            //else
+                //miss = false;
             AudioSource.PlayClipAtPoint(skipsound, transform.position);
 
 

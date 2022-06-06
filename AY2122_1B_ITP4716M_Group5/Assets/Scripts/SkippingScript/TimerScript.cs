@@ -34,7 +34,7 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+
         InvokeRepeating("CreatBird", Random.Range(4, 9), Random.Range(5, 11));
     }
 
@@ -124,7 +124,7 @@ public class TimerScript : MonoBehaviour
         float y;
         y = Random.Range(1, 4);
 
-        Instantiate(Birds, new Vector3(17f, y, 10f), Quaternion.identity);
+        Instantiate(Birds, new Vector3(17f, y, 14f), Quaternion.identity);
     }
 
     public static bool GetEndGame()
