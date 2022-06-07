@@ -39,22 +39,22 @@ public class TurnTheRope : MonoBehaviour
 
     void OnTriggerEnter(Collider col) 
     {
-        //if (col.CompareTag("Player") && col.CompareTag("Scorer"))
-        //{
-        //    invalidShipping += 1;
-        //    miss = true;
-        //    missText.SetActive(true);
+        if (col.CompareTag("Player") && col.CompareTag("Scorer"))
+        {
+            invalidShipping += 1;
+            miss = true;
+            missText.SetActive(true);
 
-        //    if (invalidShipping >= 2)
-        //    {
-        //        ScoreCount.ResetScore();
-        //        invalidShipping = 0;
-        //    }
-        //}
+            if (invalidShipping >= 2)
+            {
+                ScoreCount.ResetScore();
+                invalidShipping = 0;
+            }
+        }
 
         if (col.CompareTag("Player"))
         {
-            Debug.Log("touch");
+            //Debug.Log("touch");
             invalidShipping += 1;
             miss = true;
             missText.SetActive(true);

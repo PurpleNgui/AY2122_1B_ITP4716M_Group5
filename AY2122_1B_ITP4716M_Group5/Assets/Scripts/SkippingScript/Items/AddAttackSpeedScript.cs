@@ -34,7 +34,7 @@ public class AddAttackSpeedScript : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            TurnTheRope.setRopeSpeed(300);
+            TurnTheRope.setRopeSpeed(100);
             Destroy(this.gameObject);
         }
     }

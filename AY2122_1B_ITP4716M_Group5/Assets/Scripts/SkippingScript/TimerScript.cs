@@ -100,12 +100,12 @@ public class TimerScript : MonoBehaviour
             }
         }
 
-        if(TurnTheRope.getRopeSpeed() >= 500)
+        if(TurnTheRope.getRopeSpeed() >= 300)
         {
             aasTime -= Time.deltaTime;
             if (aasTime <= 0)
             {
-                TurnTheRope.setRopeSpeed(-300); ;
+                TurnTheRope.setRopeSpeed(-100); ;
                 aasTime = 5f;
             }
         }
