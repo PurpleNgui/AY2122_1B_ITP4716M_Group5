@@ -66,7 +66,7 @@ public class TimerScript : MonoBehaviour
         if ((win.activeInHierarchy || gameOver.activeInHierarchy) && endGame == false)
         {
             endGame = true;
-            Debug.Log("end game");
+            //Debug.Log("end game");
         }
 
         if (earth.activeInHierarchy)
