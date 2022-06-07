@@ -27,7 +27,7 @@ public class ToMemory : MonoBehaviour
         {
             //Debug.Log("Touch");
             FPSController.SetActive(false);
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("MemoryScene");
             
         }
     }
