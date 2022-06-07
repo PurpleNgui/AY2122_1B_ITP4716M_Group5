@@ -54,11 +54,11 @@ public class TurnTheRope : MonoBehaviour
 
         if (col.CompareTag("Player"))
         {
-            //Debug.Log("touch");
+            Debug.Log("touch");
             invalidShipping += 1;
-            //miss = true;
+            miss = true;
             missText.SetActive(true);
-            
+
             if (invalidShipping >= 2)
             {
                 ScoreCount.ResetScore();
@@ -66,15 +66,15 @@ public class TurnTheRope : MonoBehaviour
             }
         }
 
-        if(col.CompareTag("Scorer"))
+        if (col.CompareTag("Scorer"))
         {
-            //    if (!miss)
-            //    {
-            ScoreCount.UpdateScore(1);
+            if (!miss)
+            {
+                ScoreCount.UpdateScore(1);
                 successText.SetActive(true);
-            //}
-            //else
-                //miss = false;
+            }
+            else
+                miss = false;
             AudioSource.PlayClipAtPoint(skipsound, transform.position);
 
 

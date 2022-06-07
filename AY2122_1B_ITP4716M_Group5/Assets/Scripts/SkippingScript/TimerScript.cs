@@ -25,16 +25,18 @@ public class TimerScript : MonoBehaviour
 
     public GameObject startCountDownTimeGO;
 
-    private bool IsStartGame = false;
-    private static bool startGame = false;
+    private bool IsStartGame;
+    private static bool startGame;
 
-    private static bool endGame = false;
+    private static bool endGame ;
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        IsStartGame = false;
+        startGame = false;
+        endGame = false;
         InvokeRepeating("CreatBird", Random.Range(4, 9), Random.Range(5, 11));
     }
 
