@@ -7,7 +7,7 @@ public class BossAttackTime : MonoBehaviour
 {
     private float bossAttackTime;
     [SerializeField]
-    private float time = 10;
+    private float time = 15;
 
     public Animator bossAnimation;
 
