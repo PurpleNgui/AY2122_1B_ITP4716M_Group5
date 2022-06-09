@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject WinText;
 
-    [SerializeField]
-    private GameObject ReturnButton;
+    //[SerializeField]
+    //private GameObject ReturnButton;
 
     [SerializeField]
     private GameObject ReturnImage;
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
             {
                 //SceneManager.LoadScene("Menu");
                 WinText.SetActive(true);
-                ReturnButton.SetActive(true);
+                //ReturnButton.SetActive(true);
                 ReturnImage.SetActive(true);
                 GetComponent<CountDownTimer>().setIsRunning(false);
             }
