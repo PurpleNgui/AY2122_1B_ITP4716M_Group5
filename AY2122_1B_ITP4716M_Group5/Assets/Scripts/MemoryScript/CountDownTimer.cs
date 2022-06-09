@@ -74,7 +74,7 @@ public class CountDownTimer : MonoBehaviour
         }
         else if (timer > 0 && !isRunning)
         {
-            Debug.Log("Pause");
+            //Debug.Log("Pause");
         }
         else if (timer < 0 && isRunning)
         {

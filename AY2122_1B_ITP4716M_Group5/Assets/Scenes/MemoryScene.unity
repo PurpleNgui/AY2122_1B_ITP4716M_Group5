@@ -668,7 +668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Number of matches : 13'
+  m_Text: 'Number of matches : 10'
 --- !u!222 &146311900
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2210,6 +2210,7 @@ MonoBehaviour:
   - {fileID: 878482945}
   - {fileID: 1329204567}
   matchText: {fileID: 146311899}
+  timer: {fileID: 632449527}
   WinText: {fileID: 2003585765}
   ReturnImage: {fileID: 1037016051}
 --- !u!4 &345348883

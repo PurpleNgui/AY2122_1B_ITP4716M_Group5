@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Sprite cardBack;
     public GameObject[] cards;
     public Text matchText;
+    public GameObject timer;
     
     [SerializeField]
     private GameObject WinText;
@@ -98,7 +99,7 @@ public class GameManager : MonoBehaviour
                 WinText.SetActive(true);
                 //ReturnButton.SetActive(true);
                 ReturnImage.SetActive(true);
-                GetComponent<CountDownTimer>().setIsRunning(false);
+                timer.GetComponent<CountDownTimer>().setIsRunning(false);
             }
         }
 
