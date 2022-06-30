@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Text: 'Find all the pairs within 5 minutes.
 
 
-    Click on the card to filp.'
+    Press the card to filp.'
 --- !u!222 &51264616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3365,7 +3365,7 @@ GameObject:
   - component: {fileID: 666982533}
   - component: {fileID: 666982532}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: RuleCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
