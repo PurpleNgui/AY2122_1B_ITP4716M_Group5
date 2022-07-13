@@ -4,8 +4,8 @@ using System.Collections;
 public class BoatController : MonoBehaviour
 {
 
-	public float turnSpeed = 1000f;
-	public float accellerateSpeed = 1000f;
+	public float turnSpeed = 100f;
+	public float accellerateSpeed = 100f;
 
 	private Rigidbody rbody;
 
