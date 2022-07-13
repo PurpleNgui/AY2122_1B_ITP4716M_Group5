@@ -91,7 +91,7 @@ public class VideoManager : MonoBehaviour
 
     public void PlayOrPause()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (vp.isPlaying)
             {
