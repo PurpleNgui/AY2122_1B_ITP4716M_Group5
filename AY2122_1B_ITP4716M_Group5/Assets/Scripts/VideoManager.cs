@@ -74,7 +74,7 @@ public class VideoManager : MonoBehaviour
         vp.aspectRatio = VideoAspectRatio.Stretch;
 
         vp.Prepare();
-        vp.isLooping = true;
+        vp.isLooping = false;
 
         vp.frame = (long)vp.frameCount;
     }
@@ -91,7 +91,7 @@ public class VideoManager : MonoBehaviour
 
     public void PlayOrPause()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (vp.isPlaying)
             {
