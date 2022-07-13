@@ -74,7 +74,7 @@ public class VideoManager : MonoBehaviour
         vp.aspectRatio = VideoAspectRatio.Stretch;
 
         vp.Prepare();
-        vp.isLooping = true;
+        vp.isLooping = false;
 
         vp.frame = (long)vp.frameCount;
     }
