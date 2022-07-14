@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoatScene.unity
     guid: 13dd042199f9d9f4581aa00f6986811a
+  - enabled: 1
+    path: Assets/Scenes/PetScene.unity
+    guid: c100799445abbc64281e40832fa188de
+  - enabled: 1
+    path: Assets/Scenes/TourScene.unity
+    guid: 49d8fe5d46a50f948b5be8f57f4a51ae
   m_configObjects: {}
