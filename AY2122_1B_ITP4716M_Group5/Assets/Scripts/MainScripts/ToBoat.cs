@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ToBoat : MonoBehaviour
+public class ToMemory : MonoBehaviour
 {
 
     [SerializeField]
@@ -27,7 +27,7 @@ public class ToBoat : MonoBehaviour
         {
             //Debug.Log("Touch");
             //FPSController.SetActive(false);
-            SceneManager.LoadScene("BoatScene");
+            SceneManager.LoadScene("MemoryScene");
             
         }
     }
